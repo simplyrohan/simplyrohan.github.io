@@ -2,7 +2,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --text: #ffffff;
+        --text: #fff;
         --background: #1a1a1e;
         --primary: #7a1bcc;
         --secondary: #34323f;
@@ -12,7 +12,7 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        --text: #ffffff;
+        --text: #000;
         --background: #fff;
         --primary: #7a1bcc;
         --secondary: #34323f;
@@ -29,14 +29,15 @@
 
 * {
     color: inherit;
-    font: inherit;
+    /* font: inherit; */
 }
- 
+
 a {
     color: var(--accent);
 }
 
-button, input[type="submit"] {
+button,
+input[type="submit"] {
     background-color: var(--primary);
     border: none;
     outline: none;
@@ -52,4 +53,73 @@ input {
     outline: none;
     border-radius: 1rem;
     padding: 0.2rem;
+}
+
+h1 {
+    font-size: 7rem;
+}
+
+
+.heading-section {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 2rem;
+
+    /* text-align: center; */
+}
+
+.heading-section>h1 {
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+    /* background-image: right (--accent) var(--primary); */
+    background-image: linear-gradient(to right, var(--accent), var(--primary));
+
+    
+
+    margin: 0 auto;
+    padding-right: 0.5rem;
+    animation:infinite drift 5s;
+
+
+}
+
+@keyframes drift {
+    0% {
+        color: transparent;
+        background-image: linear-gradient(to right, var(--accent), var(--primary));
+
+    }
+
+    
+    25% {
+        color: var(--primary);
+
+    }
+
+    50% {
+        color: transparent;
+        background-image: linear-gradient(to right, var(--primary), var(--accent));
+
+    }
+
+    75% {
+        color: var(--accent);
+    }
+
+    100% {
+        color: transparent;
+    }
+}
+
+@keyframes carrot-blink {
+    from, to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--text);
+    }
+
 }

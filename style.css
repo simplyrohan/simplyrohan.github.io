@@ -1,0 +1,122 @@
+:root {
+    --background: #1a1f29;
+    --green: #95e6cb;
+}
+
+body {
+    background-color: var(--background);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.button {
+    position: relative;
+    height: 5rem;
+    width: 8rem;
+    padding: 0;
+    border: 4px solid var(--green);
+    text-align: center;   
+    line-height: 5rem; 
+    margin-left: 10rem;
+    margin-top: 3rem;
+    /* padding: 0 0; */
+}
+
+.textMask {
+    color: var(--green);
+    font-size: 2rem;
+    font-weight: 700;
+    transition: 0.5s color ease-in-out;
+}
+
+.button:hover .textMask {
+    color: var(--background);
+}
+
+.circle {
+    display: inline-block;
+    position: absolute;
+    /* background-color: red; */
+    width: 8rem;
+    height: 5rem;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.ink {
+    display: inline-block;
+    position: absolute;
+    background-color: var(--green);
+    width: 0;
+    height: 0;
+    border-radius: 100000px;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s, opacity 0.5s;
+    opacity: 0.5;
+}
+
+.button:hover .ink {
+    width: 24rem;
+    height: 24rem;
+    opacity: 1;
+}
+
+.flip {
+    display: inline-block;
+
+    /* border: 1px solid var(--green); */
+
+    padding-top: 2rem;
+
+    height: 3rem;
+    font-size: 2rem;
+
+    line-height: 2rem;
+    overflow: hidden;
+
+    position: relative;
+
+    transition: all 2s cubic-bezier(.2,.91,.12,.88);
+    font-weight: 600;
+
+}
+
+.inner-flip {
+    display: inline-block;
+    position: relative;
+    transition: all 1s cubic-bezier(.2,.91,.12,.88);
+    bottom: 0;
+    transform: none;
+}
+
+
+.flip:hover .inner-flip {
+    bottom: 2rem;
+
+}
+
+#first {
+    color:rgba(255, 255, 255, 0.7);
+    opacity: 1;
+}
+
+.flip:hover #first {
+    transform: perspective(100px) rotateX(80deg);
+    opacity: 0;
+
+}
+
+#second {
+    color: var(--green);
+    transform: perspective(100px) rotateX(-80deg);
+    opacity: 0;
+}
+
+.flip:hover #second {
+    transform: perspective(100px) rotateX(0deg);
+    opacity: 1;
+}

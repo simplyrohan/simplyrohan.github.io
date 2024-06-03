@@ -1,122 +1,134 @@
 :root {
-    --background: #1a1f29;
-    --green: #95e6cb;
+    --background: #12151C;
+    --text: white;
+
+    --accent: #95E6CB;
+    --accent-2: #73D0FF;
+
+    --primary: #409FFF21;
+    --secondary: #409FFF40;
+
 }
 
 body {
     background-color: var(--background);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-}
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
 
-
-.button {
-    position: relative;
-    height: 5rem;
-    width: 8rem;
-    padding: 0;
-    border: 4px solid var(--green);
-    text-align: center;   
-    line-height: 5rem; 
-    margin-left: 10rem;
-    margin-top: 3rem;
-    /* padding: 0 0; */
-}
-
-.textMask {
-    color: var(--green);
-    font-size: 2rem;
-    font-weight: 700;
-    transition: 0.5s color ease-in-out;
-}
-
-.button:hover .textMask {
-    color: var(--background);
-}
-
-.circle {
-    display: inline-block;
-    position: absolute;
-    /* background-color: red; */
-    width: 8rem;
-    height: 5rem;
     margin: 0;
     padding: 0;
-    left: 0;
-    z-index: -1;
-    overflow: hidden;
 }
 
-.ink {
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        width: 75vw;
+        height: 20rem;
+        font-size: 3.5rem;
+        font-weight: 400;
+
+        line-height: 150%;
+
+        .name {
+            font-size: 7rem;
+            /* letter-spacing: -10%; */
+            letter-spacing: -7px;
+
+            .wave {
+                display: inline-block;
+                animation: wave 2s infinite;
+            }
+        }
+
+        .code {
+            display: inline-block;
+            font-family: 'Fire Code', monospace;
+            font-style: italic;
+            font-size: 1.5rem;
+            background-color: var(--primary);
+            padding: 0.5rem;
+            line-height: 100%;
+            border-radius: 0.8rem;
+        }
+
+        .code::after {
+            content: '   ';
+            display: inline-block;
+            width: 0.7ch;
+            height: 1.5rem;
+            background-color: var(--accent);
+            animation: cursor 0.8s infinite;
+
+        }
+    }
+
+
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(35deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#mouse-trail {
+    position: fixed;
     display: inline-block;
+    background-color: var(--accent);
+    opacity: 0;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100rem;
+
+    transition: 0.1s ease-out;
+
+    pointer-events: none;
+
+}
+
+.glitch {
+    opacity: 0;
     position: absolute;
-    background-color: var(--green);
-    width: 0;
-    height: 0;
-    border-radius: 100000px;
-    transform: translate(-50%, -50%);
-    transition: width 0.5s, height 0.5s, opacity 0.5s;
-    opacity: 0.5;
-}
-
-.button:hover .ink {
-    width: 24rem;
-    height: 24rem;
-    opacity: 1;
-}
-
-.flip {
-    display: inline-block;
-
-    /* border: 1px solid var(--green); */
-
-    padding-top: 2rem;
-
-    height: 3rem;
-    font-size: 2rem;
-
-    line-height: 2rem;
+    font-family: 'Fire Code', monospace;
+    word-break: break-all;
+    color: grey;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    z-index: 1;
     overflow: hidden;
-
-    position: relative;
-
-    transition: all 2s cubic-bezier(.2,.91,.12,.88);
-    font-weight: 600;
-
-}
-
-.inner-flip {
-    display: inline-block;
-    position: relative;
-    transition: all 1s cubic-bezier(.2,.91,.12,.88);
-    bottom: 0;
-    transform: none;
-}
-
-
-.flip:hover .inner-flip {
-    bottom: 2rem;
-
-}
-
-#first {
-    color:rgba(255, 255, 255, 0.7);
-    opacity: 1;
-}
-
-.flip:hover #first {
-    transform: perspective(100px) rotateX(80deg);
-    opacity: 0;
-
-}
-
-#second {
-    color: var(--green);
-    transform: perspective(100px) rotateX(-80deg);
-    opacity: 0;
-}
-
-.flip:hover #second {
-    transform: perspective(100px) rotateX(0deg);
-    opacity: 1;
 }

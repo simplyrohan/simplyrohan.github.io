@@ -1,10 +1,17 @@
-import flask
+import http.server
 
-app = flask.Flask(__name__, template_folder='.', static_folder='.')
+PORT = 8000
 
-@app.route('/')
-def index():
-    return flask.render_template('index.html')
+class NoCacheHTTPRequestHandler(
+    http.server.SimpleHTTPRequestHandler
+):
+    def send_response_only(self, code, message=None):
+        super().send_response_only(code, message)
+        self.send_header('Cache-Control', 'no-store, must-revalidate')
+        self.send_header('Expires', '0')
 
 if __name__ == '__main__':
-    app.run()
+    http.server.test(
+        HandlerClass=NoCacheHTTPRequestHandler,
+        port=PORT
+    )

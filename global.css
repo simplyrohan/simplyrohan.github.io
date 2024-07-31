@@ -1,0 +1,55 @@
+:root {
+    --background: #12151C;
+    --text: white;
+
+    --accent: #95E6CB;
+    --accent-2: #73D0FF;
+
+    --primary: #409FFF21;
+    --secondary: #409FFF40;
+
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+#mouse-trail {
+    position: fixed;
+    display: inline-block;
+    background-color: var(--accent);
+    opacity: 0;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100rem;
+
+    transition: 0.1s ease-out;
+
+    pointer-events: none;
+
+}
+
+.glitch {
+    opacity: 0;
+    position: absolute;
+    font-family: 'Fire Code', monospace;
+    word-break: break-all;
+    color: grey;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    z-index: 1;
+    overflow: hidden;
+}

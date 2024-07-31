@@ -92,7 +92,7 @@ nav {
             line-height: 2rem;
             margin-top: 2rem;
             
-            transition: all 0.1s ease-out;
+            transition: all 0.25s ease-out;
 
             .second {
                 color: var(--accent);
@@ -132,4 +132,10 @@ nav {
             background-color: var(--accent);
         }
     }
+}
+
+.center-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

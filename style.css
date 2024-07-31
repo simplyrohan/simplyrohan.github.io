@@ -128,3 +128,57 @@
         }
     }
 }
+
+#contact {
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+
+    background-color: var(--tertiary);
+
+    .contact-card {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: 'Inter', sans-serif;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 2rem;
+
+        background-color: black;
+        height: 14rem;
+        width: 10rem;
+
+        border-radius: 1rem;
+
+        padding: 1rem;
+
+        transition: all 0.2s ease-out;
+
+        img {
+            height: 10vh;
+            width: 10vh;
+            transition: all 0.2s ease-out;
+
+        }
+
+    }
+
+    .contact-card:hover {
+        background-color: var(--primary);
+        color: var(--accent);
+
+        img {
+            transform: scale(1.1);
+        }
+    }
+}

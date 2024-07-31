@@ -21,6 +21,7 @@ function typing() {
 
 typing()
 
+navBar = document.querySelector('nav')
 
 document.addEventListener('keydown', function (event) {
     if (animationValid) {
@@ -31,7 +32,11 @@ document.addEventListener('keydown', function (event) {
 })
 document.addEventListener('click', function (event) {
     if (animationValid) {
-        scrollDown()
+        console.log(event.target)
+        console.log(!(navBar.contains(event.target)))
+        if (!(navBar.contains(event.target))) {
+            scrollDown()
+        }
     }
 })
 
@@ -52,7 +57,7 @@ function scrollDown() {
     animationValid = false
 }
 
-profile = document.querySelector('.profile')
+profile = document.querySelector('.flipper')
 
 profile.addEventListener('click', function () {
     window.scrollTo({ top: window.innerHeight * 2, behavior: 'smooth' })

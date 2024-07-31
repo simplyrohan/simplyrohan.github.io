@@ -77,3 +77,54 @@
         opacity: 1;
     }
 }
+
+.about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--tertiary);
+        height: 85vh;
+        width: 90vw;
+
+        border-radius: 1rem;
+        overflow: hidden;
+
+
+        #aboutme {
+            width: 100%;
+            border: 1px solid white;
+            border-left: none;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+
+            padding: 1rem;
+
+            font-family: monospace;
+            font-size: 1rem;
+            line-height: 150%;
+        }
+
+        #location {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 35vw;
+
+            font-size: 1rem;
+
+
+            background-color: black;
+
+            span {
+                display: block;
+            }
+        }
+    }
+}

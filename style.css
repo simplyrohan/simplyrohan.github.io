@@ -25,26 +25,35 @@
             }
         }
 
-        .code {
-            display: inline-block;
-            font-family: 'Fire Code', monospace;
-            font-style: italic;
-            font-size: 1.5rem;
-            background-color: var(--primary);
-            padding: 0.5rem;
-            line-height: 100%;
-            border-radius: 0.8rem;
+        @media (min-width: 600px) {
+            .code {
+                display: inline-block;
+                font-family: 'Fire Code', monospace;
+                font-style: italic;
+                font-size: 1.5rem;
+                background-color: var(--primary);
+                padding: 0.5rem;
+                line-height: 100%;
+                border-radius: 0.8rem;
+            }
+
+            .code::after {
+                content: '   ';
+                display: inline-block;
+                width: 0.7ch;
+                height: 1.5rem;
+                background-color: var(--accent);
+                animation: cursor 0.8s infinite;
+
+            }
+        }
+        @media (max-width: 600px) {
+            .code {
+                display: none;
+            }
+            
         }
 
-        .code::after {
-            content: '   ';
-            display: inline-block;
-            width: 0.7ch;
-            height: 1.5rem;
-            background-color: var(--accent);
-            animation: cursor 0.8s infinite;
-
-        }
     }
 
 
@@ -140,6 +149,7 @@
             #aboutme {
                 border-radius: 1rem;
             }
+
             #location {
                 display: none;
             }

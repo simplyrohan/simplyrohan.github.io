@@ -4,125 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohan Gupta</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>simplyrohan</title>
 
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
     <nav>
-        <span class="profile">
-            <img src="pfp.png" alt="">
-            <span class="flipper"><span id="first">Rohan Gupta</span><br><span class="second">Contact Me</span></span>
+        <span class="left">
+            <img src="assets/profile.png" alt="" id="profile-picture">
+            <span>Rohan Gupta</span>
         </span>
-        <span class="contact">
-            <a href="https://github.com/simplyrohan" style="mask-image: url(github.svg);" target="_blank"></a>
-            <a href="https://discord.com/users/997641290068000818" style="mask-image: url(discord.svg);"
-                target="_blank"></a>
-            <a href="mailto: simplyrohan10@gmail.com" style="mask-image: url(email.svg);" target="_blank"></a>
-        </span>
+        <span class="right"></span>
     </nav>
-    <span id="mouse-trail"></span>
-    <div class="hero">
-        <div class="glitch"></div>
-        <div class="container">
-            Hi, I'm
-            <br>
-            <span class="name">Rohan Gupta <span class="wave">👋</span></span>
-            <br>
-            <span class="code" id="activate"></span>
-        </div>
-    </div>
-    <div class="about">
-        <div class="card">
-            <div id="location" style="font-family: monospace;">
-                <span>⠀Centered⠀In⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀⠀_⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span> /⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>|⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span> \_⠀ALIFORNIA⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀⠀⢠⣷⣦⣄⣀______⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀⠀|⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶\⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀/⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>|⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿|⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>|⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿|⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀|⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿/⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀|⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿/⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>|⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿|⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀|⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏|⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀⠀|⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆\⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀⠀⠀|⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧\⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀⠀⠀|⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷\⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀⠀⠀\⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀⠀⠀⠀|⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿|⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀⠀⠀⠀|⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\⠀⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀⠀⠀⠀⠀|⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\⠀⠀⠀⠀⠀⠀⠀</span>
-                <span>⠀⠀⠀⠀⠀⠀\⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷\⠀⠀⠀⠀⠀</span>
-                <span>⠀⠀⠀⠀⠀⠀|⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\⠀⠀⠀⠀</span>
-                <span>⠀⠀⠀⠀⠀⠀\⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\⠀⠀⠀</span>
-                <span>⠀⠀⠀⠀⠀⠀⠀⠀⠈\⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿|⠀⠀</span>
-                <span>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\⠀</span>
-                <span>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿/⠀</span>
-                <span>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿|⠀⠀</span>
-                <span>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀|⣿⣿⣿⣿⣿⣿⣿⣿\⠀⠀⠀</span>
-                <span>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\<u>⠿⠿⠿⠿⠿⢿⣿⣿</u>/⠀⠀⠀</span>
-            </div>
-            <div id="aboutme">
-                <h2>About Me</h2>
-                <p>I'm Rohan Gupta, a student centered in California. I'm an aspiring developer, and work in many
-                    fields.
-                    I use a wide-range of technologies, but specialize with using Flask with Python, and Vanilla
-                    HTML/CSS/JS
-                    <span id="techonolgies">
-
-                    </span>
-                </p>
-            </div>
-        </div>
+    <div class="section" id="hero">
+        <h2>Hi, I'm</h2>
+        <h1 class="huge">Rohan Gupta <span id="wave">👋</span></h1>
+        <span class="caption">
+            <span class="fancy">Embedded Systems</span> and <span class="fancy">Web Development</span>
+        </span>
     </div>
 
-    <div class="center-parent">
-        <h1>Contact Me</h1>
-    </div>
-    <div id="contact">
-        <a class="contact-card" href="https://github.com/simplyrohan" target="_blank">
-            <img src="github.svg" alt="">
-            GitHub
-        </a>
-        <a class="contact-card" href="https://discord.com/users/997641290068000818" target="_blank">
-            <img src="discord.svg" alt="">
-            Discord
-        </a><a class="contact-card" href="mailto: simplyrohan10@gmail.com" target="_blank">
-            <img src="email.svg" alt="">
-            Email
-        </a>
-    </div>
-    <form id="redirector">
-        <input type="text" placeholder="Link redirector" id="redirector-target">
-        <input type="submit" value="Submit">
-    </form>
-    <script>
-        window.onerror = (e, s, l) => {
-            alert(e, s, l)
-        }
-        document.querySelector("#redirector").addEventListener('submit', (e) => {
-            e.preventDefault()
-            if (!/^https?:\/\//i.test(document.querySelector('#redirector-target').value)) {
-                window.location.href = 'http://' + document.querySelector('#redirector-target').value
-            }
-            else {
-                window.location.href = document.querySelector('#redirector-target').value
-            }
-        })
-    </script>
 </body>
 
 </html>

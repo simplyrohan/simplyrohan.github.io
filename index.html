@@ -25,6 +25,30 @@
         </span>
     </div>
 
+    <span>
+        You know who you are Michael Jackson, you know who you are.
+        <input type="text" name="url" id="url" placeholder="Enter URL">
+        <button id="submit">Submit</button>
+    </span>
+    <script>
+
+        function makeURL(input, template = 'https://www.google.com/search?q=%s') {
+            try {
+                return new URL(input).toString();
+            } catch (err) { }
+
+            try {
+                const url = new URL(`http://${input}`);
+                if (url.hostname.includes(".")) return url.toString();
+            } catch (err) { }
+
+            return template.replace("%s", encodeURIComponent(input));
+        }
+        document.getElementById('submit').addEventListener('click', () => {
+            const url = document.getElementById('url').value;
+            window.location.href = makeURL(url);
+        });
+    </script>
 </body>
 
 </html>

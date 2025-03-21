@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools - simplyrohan</title>
+
+    <link rel="stylesheet" href="styles/tools.css">
+
+
+    <!-- <script defer>
+        let x = document.getElementById('x-size')
+        let y = document.getElementById('y-size')
+        let img = document.getElementById('random-img-out')
+
+        function gen() {
+            img.src = `https://picsum.photos/${x.value}/${y.value}?random=1`
+        }
+
+        x.addEventListener("change", gen)
+        y.addEventListener("change", gen)
+
+        let link_redirector = document.getElementById('link-redirect-target')
+
+
+        function search(input, template) {
+            try {
+                return new URL(input).toString();
+            } catch (err) { }
+
+            try {
+                const url = new URL(`http://${input}`);
+                if (url.hostname.includes(".")) return url.toString();
+            } catch (err) { }
+
+            return template.replace("%s", encodeURIComponent(input));
+        }
+
+        link_redirector.addEventListener("keydown", (e) => {
+            if (e.keyCode == 13) {
+                e.preventDefault();
+                window.location.href = search(link_redirector.value, 'https://www.google.com/search?q=%s')
+            }
+        })
+    </script> -->
+</head>
+
+<body>
+    <nav>
+        <span class="left">
+            <img src="assets/profile.png" id="profile-picture">
+            <span>simplyrohan</span>
+        </span>
+        <span class="right">
+            <a href="index.html" class="links">About</a>
+            <a href="projects.html" class="links">Projects</a>
+            <a href="tools.html" class="links">Tools</a>
+        </span>
+    </nav>
+
+    <!-- <div class="section" id="hero">
+        <h2>Tools</h2>
+        <span class="caption">
+            Some miscellaneous utilites
+        </span>
+    </div>
+    <div class="section" id="tools">
+        <div class="tool square" id="link-redirector-tool">
+            <h3>Link Redirector</h3>
+            <input type="text" name="link-redirect-target" id="link-redirect-target" placeholder="Redirect URL">
+        </div>
+        <div class="tool" id="random-image-tool">
+
+            <form id="random-image">
+                <span>
+                    <h3>Random Image</h3>
+
+                    <input type="number" name="x-size" id="x-size" placeholder="Image Width" value="500">
+                    <input type="number" name="y-size" id="y-size" placeholder="Image Height" value="500">
+                </span>
+                <img src="https://picsum.photos/500/500?random=1" id="random-img-out">
+            </form>
+        </div>
+    </div> -->
+</body>
+
+</html>

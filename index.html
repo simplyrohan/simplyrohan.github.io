@@ -12,43 +12,31 @@
 <body>
     <nav>
         <span class="left">
-            <img src="assets/profile.png" alt="" id="profile-picture">
-            <span>Rohan Gupta</span>
+            <img src="assets/profile.png" id="profile-picture">
+            <span>simplyrohan</span>
         </span>
-        <span class="right"></span>
+        <span class="right">
+            <a href="index.html" class="links">About</a>
+            <a href="projects.html" class="links">Projects</a>
+            <a href="tools.html" class="links">Tools</a>
+        </span>
     </nav>
     <div class="section" id="hero">
         <h2>Hi, I'm</h2>
-        <h1 class="huge">Rohan Gupta <span id="wave">👋</span></h1>
+        <h1 class="huge">Rohan <span id="wave">👋</span></h1>
         <span class="caption">
             <span class="fancy">Embedded Systems</span> and <span class="fancy">Web Development</span>
         </span>
+
+        <p>
+            I'm a high school student who loves programming, embedded systems, and web development. I like making
+            projects with unusual restrictions that challenge the limits of the technology.
+            I also have an interest in 3D printing, general electronics, and design.
+            <br>
+            <br>
+            You can find some of my favorite projects in <a href="projects.html"><code>/projects</code></a>
+        </p>
     </div>
-
-    <span>
-        You know who you are Michael Jackson, you know who you are.
-        <input type="text" name="url" id="url" placeholder="Enter URL">
-        <button id="submit">Submit</button>
-    </span>
-    <script>
-
-        function makeURL(input, template = 'https://www.google.com/search?q=%s') {
-            try {
-                return new URL(input).toString();
-            } catch (err) { }
-
-            try {
-                const url = new URL(`http://${input}`);
-                if (url.hostname.includes(".")) return url.toString();
-            } catch (err) { }
-
-            return template.replace("%s", encodeURIComponent(input));
-        }
-        document.getElementById('submit').addEventListener('click', () => {
-            const url = document.getElementById('url').value;
-            window.location.href = makeURL(url);
-        });
-    </script>
 </body>
 
 </html>

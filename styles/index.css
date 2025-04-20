@@ -1,37 +1,31 @@
 @import "./base.css";
 
-
 #wave {
   display: inline-block;
   animation: wave 2s ease-in-out infinite;
 }
 
-#hero {
-
-  p {
-    margin-top: 3rem;
-    
-    background-image: linear-gradient(rgba(15, 15, 15, 0.9), rgba(15, 15, 15, 0.9)), linear-gradient(45deg, var(--primary-600) 50%, var(--accent-200));
-    padding: 1rem;
-    border-radius: 0.5rem;
-
-    border: 0.5px solid var(--background-700);
-
-    max-width: 55em;
-    text-align: center;
-
-  }
+#hero p {
+  margin-top: 3rem;
+  background-image: linear-gradient(
+      rgba(15, 15, 15, 0.9),
+      rgba(15, 15, 15, 0.9)
+    ),
+    linear-gradient(45deg, var(--primary-600) 50%, var(--accent-200));
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.5px solid var(--background-700);
+  max-width: 95vw;
+  text-align: center;
 }
 
 @keyframes wave {
   0% {
     transform: rotate(5deg);
   }
-
   50% {
     transform: rotate(30deg);
   }
-
   100% {
     transform: rotate(5deg);
   }

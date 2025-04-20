@@ -1,56 +1,52 @@
 @import "./base.css";
 
 #tools {
-    display: flex;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    margin: 0;
-    flex-grow: 0;
-    align-self: flex-start;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  margin: 0;
+  flex-grow: 0;
+  align-self: flex-start;
+}
 
-    .tool {
-        flex-grow: 0;
-        align-self: flex-start;
+#tools .tool {
+  flex-grow: 0;
+  align-self: flex-start;
+  background-image: linear-gradient(
+      rgba(15, 15, 15, 0.9),
+      rgba(15, 15, 15, 0.9)
+    ),
+    linear-gradient(45deg, var(--primary-600) 50%, var(--accent-200));
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.5px solid var(--background-700);
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-        background-image: linear-gradient(rgba(15, 15, 15, 0.9), rgba(15, 15, 15, 0.9)), linear-gradient(45deg, var(--primary-600) 50%, var(--accent-200));
-        padding: 1rem;
-        border-radius: 0.5rem;
+#tools .tool.square {
+  aspect-ratio: 1/1;
+}
 
-        border: 0.5px solid var(--background-700);
-        height: 15rem;
+#tools #random-image-tool #random-image {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+#tools #random-image-tool #random-image > * {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
-        &.square {
-            aspect-ratio: 1/1;
-        }
-    }
-
-    #link-redirector-tool {}
-
-    #random-image-tool {
-        #random-image {
-            display: flex;
-            flex-direction: row;
-            gap: 1rem;
-
-            >* {
-                height: 100%;
-                flex-grow: 1;
-
-                display: flex;
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            img {
-                height: 14rem;
-                border-radius: 0.5rem;
-                border: 1px var(--text-400) solid;
-            }
-        }
-    }
+#tools #random-image-tool #random-image img {
+  height: 14rem;
+  border-radius: 0.5rem;
+  border: 1px var(--text-400) solid;
 }
